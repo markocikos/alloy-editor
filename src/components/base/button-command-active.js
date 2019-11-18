@@ -29,6 +29,13 @@ export default WrappedComponent =>
 
 			const command = editor.getCommand(this.props.command);
 
+			console.log(
+				'BCA :: command = ' +
+					this.props.command +
+					', state = ' +
+					command.state
+			);
+
 			return command ? command.state === CKEDITOR.TRISTATE_ON : false;
 		}
 	};
